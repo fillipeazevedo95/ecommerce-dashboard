@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 
 import { addCaneca } from '../../store/canecas';
-import { Creators } from '../../store/layout';
+import { hideMessage, showMessage } from '../../store/layout';
 
 export default function Add() {
 
@@ -15,7 +15,6 @@ export default function Add() {
 
 	function onSubmit(e) {
 		e.preventDefault()
-		const { showMessage, hideMessage } = Creators
 
 		dispatch(addCaneca(form))
 
